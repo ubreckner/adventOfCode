@@ -12,13 +12,13 @@ public class Utils {
     public static <T> List<T> readFile(String resource, Class<T> clazz) {
         try {
             Path path = new File(Utils.class.getClassLoader().getResource(resource).getFile()).toPath();
-            List<T> res = new ArrayList<>();
+            List<T> res;
             switch (clazz.getSimpleName()) {
                 case "String":
                     res = Files.readAllLines(path).stream().map(s -> (T) s).collect(Collectors.toList());
                     break;
-                case "Integer":
-                    res = Files.readAllLines(path).stream().map(s -> (T) Integer.valueOf(s))
+                case "Long":
+                    res = Files.readAllLines(path).stream().map(s -> (T) Long.valueOf(s))
                                .collect(Collectors.toList());
                     break;
                 default:

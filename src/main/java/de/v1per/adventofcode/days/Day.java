@@ -12,8 +12,6 @@ public abstract class Day {
         this.two();
     }
 
-    ;
-
     abstract void one();
 
     abstract void two();
