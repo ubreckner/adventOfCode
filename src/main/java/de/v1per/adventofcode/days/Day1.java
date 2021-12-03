@@ -4,7 +4,7 @@ import de.v1per.adventofcode.utils.Utils;
 
 import java.util.List;
 
-public class Day1 extends Day {
+public class Day1 extends Day<Long> {
     public static void main(String[] args) {
         List<Long> intList = Utils.readFile("day1.txt", Long.class);
         new Day1().play(intList);
@@ -15,7 +15,7 @@ public class Day1 extends Day {
         long prevNumber = 0;
         //-1 because the first entry is a "false" increase
         int res = -1;
-        for (long number : (List<Long>) list) {
+        for (long number : list) {
             if (prevNumber < number) {
                 res++;
             }
@@ -31,7 +31,7 @@ public class Day1 extends Day {
         int res = -1;
         int i = 0;
         while (i + 2 < list.size()) {
-            long sum = (Long) list.get(i) + (Long) list.get(i + 1) + (Long) list.get(i + 2);
+            long sum = list.get(i) + list.get(i + 1) + list.get(i + 2);
             if (prevSum < sum) {
                 res++;
             }

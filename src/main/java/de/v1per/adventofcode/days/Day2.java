@@ -4,7 +4,7 @@ import de.v1per.adventofcode.utils.Utils;
 
 import java.util.List;
 
-public class Day2 extends Day {
+public class Day2 extends Day<String> {
 
     public static void main(String[] args) {
         List<String> list = Utils.readFile("day2.txt", String.class);
@@ -15,7 +15,7 @@ public class Day2 extends Day {
     void one() {
         long horizontalPos = 0;
         long depth = 0;
-        for (String nav : (List<String>) this.list) {
+        for (String nav : this.list) {
             String[] navArray = nav.split(" ");
             switch (navArray[0]) {
                 case "forward":
@@ -38,7 +38,7 @@ public class Day2 extends Day {
         long depth = 0;
         long aim = 0;
 
-        for (String nav : (List<String>) this.list) {
+        for (String nav : this.list) {
             String[] navArray = nav.split(" ");
             switch (navArray[0]) {
                 case "forward":
