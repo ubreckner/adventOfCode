@@ -77,7 +77,7 @@ public class Day3 extends Day<String> {
 
         o2Rating = Long.parseLong(o2Str.toString(), 2);
         co2Rating = Long.parseLong(co2Str.toString(), 2);
-        System.out.println("3.2: " + o2Rating * co2Rating);
+        System.out.println("3.2:  " + o2Rating * co2Rating);
     }
 
 }
