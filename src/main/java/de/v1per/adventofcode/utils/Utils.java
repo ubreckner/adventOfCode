@@ -17,8 +17,7 @@ public class Utils {
                     res = Files.readAllLines(path).stream().map(s -> (T) s).collect(Collectors.toList());
                     break;
                 case "Long":
-                    res = Files.readAllLines(path).stream().map(s -> (T) Long.valueOf(s))
-                               .collect(Collectors.toList());
+                    res = Files.readAllLines(path).stream().map(s -> (T) Long.valueOf(s)).collect(Collectors.toList());
                     break;
                 default:
                     throw new IllegalStateException("I don't know that class " + clazz.getName());
